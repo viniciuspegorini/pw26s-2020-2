@@ -42,10 +42,10 @@
 - MEAN 
 - Vaadin  
 - *.Net 
-- Django - Matheus Henrique Schimidt
+- Django
 - Rubi on Rails 
 - ZendFramework 
-- Yii Framework  - Maicon Douglas Boeno de Lima
+- Yii Framework
 - CakePHP
 - Symfony   
 - Grails 
@@ -58,12 +58,12 @@
 - Spark
 - Laravel 
 - Ionic 
-- Sails  - Roberta Garcia
+- Sails
 - Bootfaces
 - Meteor 
 - React
 - React Native
-- Flutter - Gustavo Zaffani
+- Flutter
 
 2. [Deverá ser entregue] Desenvolver uma apresentação (PPT, PDF ou Readme.MD no git) sobre:
 - As vantagens e desvantagens da linguagem, framework e/ou plataforma. 
