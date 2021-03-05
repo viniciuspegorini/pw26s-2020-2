@@ -12,7 +12,7 @@ import javax.persistence.*;
 @EqualsAndHashCode(of = {"id"})
 @NoArgsConstructor
 @AllArgsConstructor
-public class Categoria {
+public class Marca {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
