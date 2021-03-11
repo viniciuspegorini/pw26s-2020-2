@@ -12,41 +12,5 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
-@Configuration
-@EnableAuthorizationServer
-public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
-	
-	@Autowired
-	@Qualifier("usuarioServiceImpl")
-	private UserDetailsService userDetailsService;
-	
-	@Autowired
-	@Qualifier("authenticationManagerBean")
-	private AuthenticationManager authenticationManager;
-	
-	@Override
-	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-		clients.inMemory()
-					.withClient("app")
-					.secret(new BCryptPasswordEncoder().encode("utfpr"))
-					.autoApprove(true)
-					.authorizedGrantTypes("authorization_code", "refresh_token", "password", "client_credentials")
-					.scopes("openid");
-	}
-	
-	
-	@Override
-	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-		endpoints
-			.authenticationManager(authenticationManager)
-			.userDetailsService(userDetailsService);
-	}
-	
-	@Override
-	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-		security
-			.tokenKeyAccess("permitAll()")
-			.checkTokenAccess("permitAll()")
-			.passwordEncoder(new BCryptPasswordEncoder());
-	}
+public class AuthorizationServerConfig {
 }
