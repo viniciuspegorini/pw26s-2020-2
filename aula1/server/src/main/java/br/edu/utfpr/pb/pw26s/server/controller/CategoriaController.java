@@ -33,11 +33,6 @@ public class CategoriaController {
 
     @PostMapping
     private Categoria save(@RequestBody Categoria categoria) {
-
-        // savar o pedido
-        // confirmar pgo
-        // emit nf
-        // enviar email
         return categoriaRepository.save(categoria);
     }
 
