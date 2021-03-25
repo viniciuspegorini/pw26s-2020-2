@@ -8,7 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
-import java.sql.SQLException;
 import java.util.List;
 
 public abstract class CrudServiceImpl 

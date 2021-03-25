@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
 @Entity
@@ -21,7 +20,6 @@ public class Categoria implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotEmpty(message = "O campo 'descrição' deve ser preenchido.")
     @Column(length = 50, nullable = false)
-    private String descricao;
+    private String nome;
 }

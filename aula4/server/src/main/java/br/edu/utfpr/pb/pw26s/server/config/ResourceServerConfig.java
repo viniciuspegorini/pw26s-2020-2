@@ -12,13 +12,13 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 
-    @Override
-    public void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/categoria/**").hasAnyRole("ADMIN", "USER")
-                .antMatchers(HttpMethod.GET, "/produto/**").hasAnyRole("ADMIN")
-                .antMatchers(HttpMethod.POST, "/produto/**").hasAnyRole("ADMIN")
-                .anyRequest().authenticated();
-    }
-
+	@Override
+	public void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests()
+				.antMatchers("/categoria/**").permitAll() //hasAnyRole("ADMIN", "USER")
+				.antMatchers("/produto/**").permitAll() //.hasAnyRole("ADMIN", "USER")
+				.antMatchers("/marca/**").permitAll() //.hasAnyRole("ADMIN")
+				.anyRequest().authenticated();
+	}
+	
 }
