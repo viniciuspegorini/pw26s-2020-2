@@ -13,12 +13,12 @@ export class CategoriaFormComponent implements OnInit {
   categoria: Categoria;
 
   constructor(private categoriaService: CategoriaService,
-              private router: Router,
-              private route: ActivatedRoute) { }
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.categoria = new Categoria();
-    const id = Number(this.route.snapshot.params.id); 
+    const id = Number(this.route.snapshot.params.id);
     if (id) {
       this.categoriaService.findOne(id).subscribe(e => {
         this.categoria = e;

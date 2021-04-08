@@ -13,10 +13,8 @@
                 <td>{{categoria.id}}</td>
                 <td>{{categoria.nome}}</td>
                 <td>
-<a [routerLink]="['/categoria', categoria.id]"
-    class="btn btn-primary">Editar</a> &nbsp;
-<a (click)="delete(categoria.id)" 
-    class="btn btn-danger">Remover</a>
+                    <a [routerLink]="['/categoria', categoria.id]" class="btn btn-primary">Editar</a> &nbsp;
+                    <a (click)="delete(categoria.id)" class="btn btn-danger">Remover</a>
                 </td>
             </tr>
         </tbody>

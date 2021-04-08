@@ -19,13 +19,13 @@ export class CategoriaListComponent implements OnInit {
   }
 
   findAll(): void {
-    this.categoriaService.findAll().subscribe( lista => {
+    this.categoriaService.findAll().subscribe(lista => {
       this.categorias = lista
     });
   }
 
   delete(id: number) {
-    this.categoriaService.delete(id).subscribe( () => {
+    this.categoriaService.delete(id).subscribe(() => {
       this.findAll();
     });
   }
